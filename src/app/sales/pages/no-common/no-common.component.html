@@ -1,0 +1,34 @@
+<div class="text-layout">
+    <h1>Not So Common Pipes</h1>
+    <p>
+        Pipes included on Angular - Usually on the Common Module
+    </p>
+</div>
+
+<div class="p-grid">
+
+    <div class="p-col p-md-6">
+        <p-fieldset legend="I18nSelectPipe" [toggleable]="true">
+            <!-- Hi {{ nombre }}, nice too meet you, we'll love invite you to our party tonight in the beach. -->
+            <p>
+                Hola {{ name }}, mucho gusto en {{ gener | i18nSelect: optionsMapping }} a nuestra casa.
+            </p>
+            <p-button
+                label="Change Cliente"
+                (onClick)="changeClient()"></p-button>
+        </p-fieldset>
+    </div>
+
+    <div class="p-col p-md-6">
+        <p-fieldset legend="I18nPluralPipe" [toggleable]="true">
+            <p>
+                Actualmente {{ clients.length | i18nPlural: clientsMap }}
+            </p>
+            <p-button
+                label="Delete Client"
+                styleClass="p-button-danger"
+                (onClick)="deleteClient()"></p-button>
+        </p-fieldset>
+    </div>
+
+</div>
