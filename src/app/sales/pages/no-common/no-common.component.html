@@ -31,4 +31,50 @@
         </p-fieldset>
     </div>
 
+    <div class="p-col p-md-6">
+        <p-fieldset legend="Slice Pipe" [toggleable]="true">
+            <b>Original</b>
+            <pre>{{ clients }}</pre>
+
+            <b>slice:0</b>
+            <pre>{{ clients | slice:0 }}</pre>
+
+            <b>slice:0:2</b>
+            <pre>{{ clients | slice:0:2 }}</pre>
+
+            <b>slice:1:2</b>
+            <pre>{{ clients | slice:1:2 }}</pre>
+
+            <b>slice:0:4</b>
+            <pre>{{ name | slice:0:4 }}</pre>
+
+        </p-fieldset>
+    </div>
+
+    <div class="p-col p-md-6">
+        <p-fieldset legend="Json Pipe" [toggleable]="true">
+            <pre>{{ heroes | json }}</pre>
+        </p-fieldset>
+    </div>
+
+    <div class="p-col p-md-6">
+        <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+            <ul>
+                <li *ngFor="let item of persons | keyvalue">
+                    {{ item. key | titlecase }}: {{ item.value }}
+                </li>
+            </ul>
+        </p-fieldset>
+    </div>
+
+    <div class="p-col p-md-6">
+        <p-fieldset legend="Async Pipe" [toggleable]="true">
+            <pre *ngIf="!(myObservable | async)">Solving observable</pre>
+            <pre>{{ myObservable | async }}</pre>
+
+            <pre *ngIf="!(valuePromess | async)">Solving promess</pre>
+            <pre>{{ valuePromess | async }}</pre>
+        </p-fieldset>
+    </div>
+
 </div>
