@@ -8,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderComponent implements OnInit {
 
+  isUpper: boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeUpperLower() {
+    this.isUpper = !this.isUpper;
   }
 
 }

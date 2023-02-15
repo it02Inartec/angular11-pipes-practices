@@ -6,6 +6,7 @@ import { NumbersComponent } from './pages/numbers/numbers.component';
 import { NoCommonComponent } from './pages/no-common/no-common.component';
 import { BasicsComponent } from './pages/basics/basics.component';
 import { OrderComponent } from './pages/order/order.component';
+import { UppercasePipe } from './pipes/uppercase.pipes';
 
 
 
@@ -14,13 +15,14 @@ import { OrderComponent } from './pages/order/order.component';
     NumbersComponent, 
     NoCommonComponent, 
     BasicsComponent, 
-    OrderComponent
+    OrderComponent,
+    UppercasePipe
   ],
   exports: [
     NumbersComponent, 
     NoCommonComponent, 
     BasicsComponent, 
-    OrderComponent
+    OrderComponent,
   ],
   imports: [
     CommonModule,
