@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Color, Heroe } from '../../interfaces/sales.interface';
 
 @Component({
   selector: 'app-order',
@@ -6,17 +7,46 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class OrderComponent implements OnInit {
+export class OrderComponent {
 
   isUpper: boolean = true;
 
-  constructor() { }
+  orderBy?: keyof Heroe;
 
-  ngOnInit(): void {
-  }
+  heroes: Heroe[] = [
+    {
+      name: 'Superman',
+      fly: true,
+      color: Color.blue
+    },
+    {
+      name: 'Batman',
+      fly: false,
+      color: Color.black
+    },
+    {
+      name: 'Robin',
+      fly: false,
+      color: Color.green
+    },
+    {
+      name: 'Daredevil',
+      fly: false,
+      color: Color.red
+    },
+    {
+      name: 'Gokú',
+      fly: true,
+      color: Color.red
+    }
+  ]
 
   changeUpperLower() {
     this.isUpper = !this.isUpper;
+  }
+
+  changeOrder( value: keyof Heroe) {
+    this.orderBy = value;
   }
 
 }

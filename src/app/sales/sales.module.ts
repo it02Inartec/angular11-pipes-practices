@@ -7,6 +7,8 @@ import { NoCommonComponent } from './pages/no-common/no-common.component';
 import { BasicsComponent } from './pages/basics/basics.component';
 import { OrderComponent } from './pages/order/order.component';
 import { UppercasePipe } from './pipes/uppercase.pipes';
+import { FlyPipe } from './pipes/fly.pipes';
+import { SortByPipe } from './pipes/sort-by.pipe';
 
 
 
@@ -15,8 +17,10 @@ import { UppercasePipe } from './pipes/uppercase.pipes';
     NumbersComponent, 
     NoCommonComponent, 
     BasicsComponent, 
+    FlyPipe,
     OrderComponent,
-    UppercasePipe
+    UppercasePipe,
+    SortByPipe
   ],
   exports: [
     NumbersComponent, 
